@@ -8,7 +8,7 @@ P = semimajor_axis * ( 1 - eccentricity^2);             % km
 
 true_anomaly_rad = strue_anomaly * pi / 180;            % deg to radian
 
-velocityInPQW = sqrt(mu/P) * [-sin(true_anomaly_rad)*180/pi; eccentricity + cos(true_anomaly_rad)*180/pi; 0];   %km/s 
+velocityInPQW = sqrt(mu/P) * [-sin(true_anomaly_rad); eccentricity + cos(true_anomaly_rad); 0];   %km/s 
 
 
 end

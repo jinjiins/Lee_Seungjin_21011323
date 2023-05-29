@@ -14,11 +14,11 @@
 
 function rangeINPQR = solveRangeInPerifocalFrame(semimajor_axis, eccentricity, true_anomaly)
 
-km = 10^3;                                                                      %1000m
-mu = 3.986004418 * 10^14/km^3;                                                  %km^3s-2
+km = 10^3;                                                                      % 1000m
+mu = 3.986004418 * 10^14/km^3;                                                  % km^3s-2
 
 P = semimajor_axis * ( 1 - eccentricity^2);
-true_anomaly_rad = strue_anomaly * pi / 180;
-rangeINPQR = P / (1 + eccentricity * cos(true_anomaly_rad)* 180/pi);            %radian to deg
+true_anomaly_rad = strue_anomaly * pi / 180;                                    % deg to radian
+rangeINPQR = P / (1 + eccentricity * cos(true_anomaly_rad));            
 
 end
