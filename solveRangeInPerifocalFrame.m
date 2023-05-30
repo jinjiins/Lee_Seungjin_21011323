@@ -19,6 +19,7 @@ mu = 3.986004418 * 10^14/km^3;                                                  
 
 P = semimajor_axis * ( 1 - eccentricity^2);
 true_anomaly_rad = strue_anomaly * pi / 180;                                    % deg to radian
-rangeINPQR = P / (1 + eccentricity * cos(true_anomaly_rad));            
+rangeINPQR = [P / (1 + eccentricity * cos(true_anomaly_rad))*cos(true_anomaly_rad); P / (1 + eccentricity * cos(true_anomaly_rad)) * sin(true_anomaly_rad); 0;];
+
 
 end
