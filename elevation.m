@@ -3,13 +3,18 @@
 % description : 계산된 elevation angle이 el_mask보다 커야만 정상적으로 출력하고, 크지 않을 경우 NaN으로 처리
 
 function el = elevation(ENU, el_mask)
+
 % East ENU(:, 1) 
 % North = ENU(:, 2)
-% U ENU(:, 3)
+% Up ENU(:, 3)
+
 el = atan2(sqrt(ENU(:, 1)^2 + ENU(:, 2)^2), ENU(:, 3))  * 180 / pi;
 
-if el < el_mask
-    el = NaN;
+
+for i = 1:length(el)
+    if el(i) < el_mask
+        el(i) = NaN;
+    end
 end
 
 end
