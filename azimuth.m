@@ -4,7 +4,7 @@
 
 function az = azimuth(ENU)
 
-az = atan2(ENU(:,1), ENU(:,2)) * 180 / pi;
+az = atan2(ENU(:,2), ENU(:,1)) * 180 / pi;
 
 
 end
