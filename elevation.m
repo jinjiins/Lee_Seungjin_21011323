@@ -8,7 +8,7 @@ function el = elevation(ENU, el_mask)
 % North = ENU(:, 2)
 % Up ENU(:, 3)
 
-el = atan2(sqrt(ENU(:, 1)^2 + ENU(:, 2)^2), ENU(:, 3))  * 180 / pi;
+el = atan2(sqrt(ENU(:, 1).^2 + ENU(:, 2).^2), ENU(:, 3))  * 180 / pi;
 
 
 for i = 1:length(el)
