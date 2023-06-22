@@ -1,8 +1,8 @@
 function Eci = PQW2ECI(arg_prg, inc_angle, RAAN)
 
-Eci = [ cos(RAAN)*cos(arg_prg)-sin(RAAN)*cos(inc_angle)*sin(arg_prg) cos(RAAN)*sin(arg_prg)-sin(RAAN)*cos(inc_angle)*cos(arg_prg) sin(RAAN)*sin(inc_angle);
-    -sin(RAAN)*cos(arg_prg)+cos(RAAN)*cos(inc_angle)*sin(arg_prg) -sin(RAAN)*sin(arg_prg)+cos(RAAN)*cos(inc_angle)*cos(arg_prg) cos(RAAN)*sin(inc_angle);
-    sin(inc_angle)*sin(arg_prg) -sin(inc_angle)*cos(arg_prg) cos(inc_angle)
+Eci = [ cosd(RAAN)*cosd(arg_prg)-sind(RAAN)*cosd(inc_angle)*sind(arg_prg) cosd(RAAN)*sind(arg_prg)-sind(RAAN)*cosd(inc_angle)*cosd(arg_prg) sind(RAAN)*sind(inc_angle);
+    -sind(RAAN)*cosd(arg_prg)+cosd(RAAN)*cosd(inc_angle)*sind(arg_prg) -sind(RAAN)*sind(arg_prg)+cosd(RAAN)*cosd(inc_angle)*cosd(arg_prg) cosd(RAAN)*sind(inc_angle);
+    sind(inc_angle)*sind(arg_prg) -sind(inc_angle)*cosd(arg_prg) cosd(inc_angle)
     ];
 
 end
